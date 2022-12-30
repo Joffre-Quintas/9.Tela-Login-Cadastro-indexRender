@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(rgb(70, 70, 70), black)
+
+}
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+.meter-password{
+    position: relative;
+    width: 100%;
+    height: .5em;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.container .meter-password::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: red;
+}
+.container.weak1 .meter-password::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: red;
+    filter: drop-shadow(0px 0px 5px red);
+}
+.container.weak2 .meter-password::after{
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: red;
+    filter: drop-shadow(0px 0px 5px red);
+}
+.container.medium .meter-password::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 123, 0);
+    filter: drop-shadow(0px 0px 5px rgb(255, 123, 0));
+}
+.container.strong .meter-password::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 255, 0);
+    filter: drop-shadow(0px 0px 5px rgb(21, 255, 0));
+}
+input{
+    border-radius: 10px;
+    height: 25px;
+    outline-color: greenyellow;
+    padding: 3px 0px 3px 30px;
+}
+input:focus{
+    outline: 2px solid greenyellow;
+}
+.container h1{
+    text-align: center;
+    color: rgb(131, 194, 36);
+}
+.form-register{
+    display: flex;
+    flex-direction: column;
+}
+.container *{
+    margin-top: 10px;
+}
+label{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+label::after{
+    content: "";
+    display: block;
+    height: 0.3em;
+    width: 20px;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+.div-btn-submit{
+    width: 100%;
+}
+.btn{
+    width: 100%;
+    height: 2em;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: rgb(131, 194, 36);
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color:greenyellow ;
+}
+.fa-user{
+    position: absolute;
+    top: 26%;
+    left: 7%;
+}
+.fa-lock{
+    position: absolute;
+    top: 42%;
+    left: 7%;
+}
